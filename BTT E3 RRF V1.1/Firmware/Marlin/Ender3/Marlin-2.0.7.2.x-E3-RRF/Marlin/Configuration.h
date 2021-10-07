@@ -102,7 +102,7 @@
  *
  * :[-1, 0, 1, 2, 3, 4, 5, 6, 7]
  */
-#define SERIAL_PORT 3 ///+-EL 29.09.2021 Включил cjtlbytybt c ESP8266 для wifi
+#define SERIAL_PORT 3 ///+EL 29.09.2021 Включил cjtlbytybt c ESP8266 для wifi
 
 /**
  * Select a secondary serial port on the board to use for communication with the host.
@@ -131,7 +131,7 @@
 #endif
 
 // Name displayed in the LCD "Ready" message and Info menu
-#define CUSTOM_MACHINE_NAME "Ender-3 Eldar" ///+-EL 29.09.2021
+#define CUSTOM_MACHINE_NAME "Ender-3 Eldar" ///+EL 29.09.2021
 
 // Printer's unique ID, used by some programs to differentiate between machines.
 // Choose your own or use a service like https://www.uuidgenerator.net/version4
@@ -784,7 +784,7 @@
  * Override with M92
  *                                      X, Y, Z, E0 [, E1[, E2...]]
  */
-#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 400, 96.34 } ///+-EL Измениол 93 на 96.34 так точнее
+#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 400, 96.34 } ///+EL Изменил 93 на 96.34 так точнее
 
 /**
  * Default Max Feed Rate (mm/s)
@@ -868,7 +868,7 @@
  *
  * See https://github.com/synthetos/TinyG/wiki/Jerk-Controlled-Motion-Explained
  */
-//#define S_CURVE_ACCELERATION ///+-EL 01.10.2021 Включид LA и выключил это т.к. пишут что они не совместимы. 
+//#define S_CURVE_ACCELERATION ///+EL 01.10.2021 Включид LA и выключил это т.к. пишут что они не совместимы. 
 
 //===========================================================================
 //============================= Z Probe Options =============================
@@ -948,7 +948,7 @@
 /**
  * The BLTouch probe uses a Hall effect sensor and emulates a servo.
  */
-#define BLTOUCH///+EL 01.10.2021
+#define BLTOUCH ///+EL 01.10.2021
 
 /**
  * Touch-MI Probe by hotends.fr
@@ -1434,7 +1434,7 @@
 #if EITHER(AUTO_BED_LEVELING_LINEAR, AUTO_BED_LEVELING_BILINEAR)
 
   // Set the number of grid points per dimension.
-  #define GRID_MAX_POINTS_X 3///+EL #define GRID_MAX_POINTS_X 5
+  #define GRID_MAX_POINTS_X 3 ///+EL 07.10.2021 #define GRID_MAX_POINTS_X 5
   #define GRID_MAX_POINTS_Y GRID_MAX_POINTS_X
 
   // Probe along the Y axis, advancing X after each column
