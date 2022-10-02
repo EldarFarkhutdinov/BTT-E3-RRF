@@ -145,7 +145,7 @@
 #endif
 
 // Name displayed in the LCD "Ready" message and Info menu
-#define CUSTOM_MACHINE_NAME "Ender-3 Eldar" ///+EL 29.09.2021
+#define CUSTOM_MACHINE_NAME "Ender-3 Eldar+" ///+EL 29.09.2021
 
 // Printer's unique ID, used by some programs to differentiate between machines.
 // Choose your own or use a service like https://www.uuidgenerator.net/version4
@@ -600,13 +600,13 @@
   #if ENABLED(PID_PARAMS_PER_HOTEND)
     // Specify up to one value per hotend here, according to your setup.
     // If there are fewer values, the last one applies to the remaining hotends.
-    #define DEFAULT_Kp_LIST {  21.73,  21.73 }
-    #define DEFAULT_Ki_LIST {   1.54,   1.54 }
-    #define DEFAULT_Kd_LIST {  76.55,  76.55 }
+    #define DEFAULT_Kp_LIST {  12.51,  12.51 } ///+EL 02.10.2022
+    #define DEFAULT_Ki_LIST {   0.79,   0.79 } ///+EL 02.10.2022
+    #define DEFAULT_Kd_LIST {  49.27,  49.27 } ///+EL 02.10.2022
   #else
-    #define DEFAULT_Kp  21.73
-    #define DEFAULT_Ki   1.54
-    #define DEFAULT_Kd  76.55
+    #define DEFAULT_Kp  12.51 ///+EL 02.10.2022
+    #define DEFAULT_Ki   0.79 ///+EL 02.10.2022
+    #define DEFAULT_Kd  49.27 ///+EL 02.10.2022
   #endif
 #endif // PIDTEMP
 
@@ -1180,7 +1180,7 @@
  *     |    [-]    |
  *     O-- FRONT --+
  */
-#define NOZZLE_TO_PROBE_OFFSET { -40, -12, 0.0 } ///+EL 01.10.2021 { -40, -10, -1.85 }
+#define NOZZLE_TO_PROBE_OFFSET { -33.23, -0.0, -1.65 } ///+EL 02.10.2022
 
 // Most probes should stay away from the edges of the bed, but
 // with NOZZLE_AS_PROBE this can be negative for a wider probing area.
@@ -1370,8 +1370,8 @@
 // @section machine
 
 // The size of the printable area
-#define X_BED_SIZE 235
-#define Y_BED_SIZE 235
+#define X_BED_SIZE 215 ///+EL 02.10.2022. Было 235
+#define Y_BED_SIZE 215 ///+EL 02.10.2022. Было 235
 
 // Travel limits (mm) after homing, corresponding to endstop positions.
 #define X_MIN_POS 0
@@ -1870,7 +1870,7 @@
 
 ///+EL 01.10.2021
 #define PREHEAT_3_LABEL       "PEDG"
-#define PREHEAT_3_TEMP_HOTEND 235
+#define PREHEAT_3_TEMP_HOTEND 230
 #define PREHEAT_3_TEMP_BED     85
 #define PREHEAT_3_TEMP_CHAMBER 35
 #define PREHEAT_3_FAN_SPEED    0 // Value from 0 to 255
